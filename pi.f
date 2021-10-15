@@ -139,8 +139,8 @@
           implicit none
           integer n
           real*16::regular_polygon,ll,sl
-	  sl=ll/sqrt(1.0q0+(ll/2.0q0**(n+1))**2)
-	  regular_polygon=2.0q0/(1.0q0/sl+1.0q0/ll)
+      sl=ll/sqrt(1.0q0+(ll/2.0q0**(n+1))**2)
+      regular_polygon=2.0q0/(1.0q0/sl+1.0q0/ll)
       end function
 
       function Accelerated(count)
@@ -149,13 +149,13 @@
           real*16::Accelerated,fact,x
           x=0q0
           do i=0,count-1,1
-	      fact=1q0
+              fact=1q0
               do j=i,1,-1
-		  fact=fact*(j*j/(2q0+2q0*j)/(1q0+2q0*j))
+              fact=fact*(j*j/(2q0+2q0*j)/(1q0+2q0*j))
               end do
               x=x+fact
-	  end do
-	  Accelerated=sqrt(x*9q0)
+      end do
+      Accelerated=sqrt(x*9q0)
       end function
 
       function Sharp(count)
@@ -165,8 +165,8 @@
           x=0q0
           do i=0,count-1,1
               x=x+(-1q0/3q0)**i/(2q0*i+1q0)
-	  end do
-	  Sharp=x*sqrt(3q0)*2q0
+      end do
+      Sharp=x*sqrt(3q0)*2q0
       end function
 
       function GrL(count)
@@ -176,8 +176,8 @@
           x=0q0
           do i=0,count-1,1
               x=x+(-1q0)**i/(2q0*i+1q0)
-	  end do
-	  GrL=x*4q0
+      end do
+      GrL=x*4q0
       end function
 
       function EM(count)
@@ -187,10 +187,10 @@
           x=0q0
           y=0q0
           do i=0,count-1,1    
-	      x=x+((1q0/5q0)**(1q0+2q0*i))/(2q0*i+1q0)*(-1q0)**i
-	      y=y+((1q0/239q0)**(1q0+2q0*i))/(2q0*i+1q0)*(-1q0)**i
-	  end do
-	  EM=(x*4q0-y)*4q0
+          x=x+((1q0/5q0)**(1q0+2q0*i))/(2q0*i+1q0)*(-1q0)**i
+          y=y+((1q0/239q0)**(1q0+2q0*i))/(2q0*i+1q0)*(-1q0)**i
+      end do
+      EM=(x*4q0-y)*4q0
       end function
 
 
@@ -215,6 +215,6 @@
               b_=b
               t_=t
               p_=p
-	  end do
-	  GaL=(a_+b_)**2/(4q0*t_)
+      end do
+      GaL=(a_+b_)**2/(4q0*t_)
       end function

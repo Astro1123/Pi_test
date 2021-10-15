@@ -124,9 +124,9 @@
           end do
           stop
 
-  200 format (a30,f33.31,a,f7.3,a)
+  200 format (a30,f16.14,a,f7.3,a)
   300 format (a30,i10)
-  400 format (a30,f33.31,' < pi < ',f33.31,a,f7.3,a)
+  400 format (a30,f16.14,' < pi < ',f16.14,a,f7.3,a)
       end program
 
       function Newton(x)
